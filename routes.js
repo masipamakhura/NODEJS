@@ -8,10 +8,11 @@ res.setHeader('Content-Type','text/html');
 if(url === '/'){
     res.write('<html');
     res.write('<head><title>First nodejs app</title></head>');
-    res.write("<body><h1>Welcome to first Nodejs App!</h1><form action='/message' method='POST'><input type='text' name='message' ><button type='submit'>Submit</button></form></body>");
+    res.write("<body><h1>Welcome to first Nodejs App</h1><form action='/message' method='POST'><input type='text' name='message' ><button type='submit'>Submit</button></form></body>");
     res.write('</html>');
    return res.end()
 }
+
 
 if(url === '/message' && method === 'POST'){
     const body = [];
